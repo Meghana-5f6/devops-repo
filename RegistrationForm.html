@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Internship Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: 100%;
+            max-width: 500px;
+            box-sizing: border-box;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="file"] {
+            margin-bottom: 15px;
+        }
+
+        input[type="submit"] {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #357ae8;
+        }
+
+        @media (max-width: 600px) {
+            form {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="/submit_registration" method="post">
+        <div style="text-align: center;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2czNeQCiB8bbcXqny7O9VBu3He1VYgcMLcQ&s" alt="Google Careers Logo" style="width: 250px; height: auto; margin-top: 20px; ">
+        </div>
+        <h1>Google Internship Registration Form</h1>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="university">University:</label>
+        <input type="text" id="university" name="university" required>
+
+        <label for="degree">Degree:</label>
+        <select id="degree" name="degree" required>
+            <option value="bachelors">Bachelors</option>
+            <option value="masters">Masters</option>
+            <option value="phd">PhD</option>
+        </select>
+
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume" required>
+
+        <label for="cover_letter">Cover Letter:</label>
+        <textarea id="cover_letter" name="cover_letter" rows="4" placeholder="Write your cover letter here..." required></textarea>
+
+        <label for="start_date">Preferred Start Date:</label>
+        <input type="date" id="start_date" name="start_date" required>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
